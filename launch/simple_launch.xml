@@ -1,0 +1,9 @@
+<launch>
+  <arg name="input_scan_topic" default="/scan" description=""/>
+  <arg name="output_pointcloud_topic" default="/pointcloud" description=""/>
+
+  <node pkg="simple_ros2_package" exec="simple_subscriber" name="simple_subscriber" output="screen">
+  </node>
+  <node pkg="simple_ros2_package" exec="simple_publisher" name="simple_publisher" output="screen">
+  </node>
+</launch>
