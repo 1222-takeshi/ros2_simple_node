@@ -6,22 +6,21 @@ find_package(std_msgs REQUIRED)
 
 ament_auto_find_build_dependencies()
 
-# ソースコードを追加する
-ament_auto_add_library(simple_ros2_package
-  src/simple_publisher_main.cpp
+ament_auto_add_executable(simple_subscriber
   src/simple_subscriber_main.cpp
-  src/simple_publisher.cpp
   src/simple_subscriber.cpp
 )
 
-ament_target_dependencies(simple_ros2_package
-  rclcpp
-  std_msgs
-  )
+ament_auto_add_executable(simple_publisher
+  src/simple_publisher_main.cpp
+  src/simple_publisher.cpp
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-ament_auto_package()
+ament_auto_package(
+  INSTALL_TO_SHARE
+)

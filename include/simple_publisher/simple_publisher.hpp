@@ -4,7 +4,7 @@
 class SimplePublisher : public rclcpp::Node
 {
 public:
-  SimplePublisher();
+  explicit SimplePublisher();
 
 private:
   void timer_callback();

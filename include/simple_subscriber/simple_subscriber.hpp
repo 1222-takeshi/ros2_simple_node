@@ -4,7 +4,7 @@
 class SimpleSubscriber : public rclcpp::Node
 {
 public:
-  SimpleSubscriber();
+  explicit SimpleSubscriber();
 
 private:
   void topic_callback(const std_msgs::msg::String::SharedPtr msg) const;

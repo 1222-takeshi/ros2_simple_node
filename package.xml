@@ -3,7 +3,7 @@
 <package format="3">
   <name>simple_ros2_package</name>
   <version>0.0.0</version>
-  <description>The convert laserscan to pointcloud2 package</description>
+  <description>The simple ros2 node package</description>
   <maintainer email="m.takeshi1995@gmail.com">takeshi</maintainer>
   <license>Apache License 2.0</license>
 
